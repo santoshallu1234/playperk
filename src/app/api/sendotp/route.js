@@ -1,36 +1,37 @@
-import transporter from '../../lib/nodemailer';
-import User from '../../models/User'; // Assuming you have a User model
-import connectDb from '../../lib/mongoose'; // Connect to your database
+import transporter from '../../../lib/nodemailer';
+// import User from '../../../models/Shopkeeper'; 
+import connectMongoDB from '../../../lib/dbConfig'; // Connect to your database
+import { NextResponse } from 'next/server';
 
-export default async function sendOtp(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
+export async function POST(req) {
+  
 
-  const { email } = req.body;
+  const {email} = await req.json();
+  console.log("email: ", email)
 
-  await connectDb(); // Connect to MongoDB
+  await connectMongoDB(); // Connect to MongoDB
 
-  const user = await User.findOne({ email });
-  if (!user) {
-    return res.status(404).json({ message: 'User does not exist' });
-  }
+  // const user = await User.findOne({ email });
+  // if (!user) {
+  //   console.log("User does not exist, creating a new one")
+  //   return NextResponse.json({ message: 'User does not exist' }, {status: 200});
+  // }
 
   const otp = Math.floor(100000 + Math.random() * 900000); // Generate a 6-digit OTP
 
   const mailOptions = {
-    from: process.env.EMAIL_SERVICE_USER,
+    from: "santoshallu1234@gmail.com",
     to: email,
-    subject: 'Your CoderHabit OTP Code',
-    text: `Dear user,\n\nYour OTP for CoderHabit is: ${otp}\n\nThank you,\nThe CoderHabit Team`,
+    subject: 'Your PlayPerk OTP Code',
+    text: `Dear user,\n\nYour OTP for PlayPerk is: ${otp}\n\nThank you,\nThe PlayPerk Team`,
   };
 
   try {
     await transporter.sendMail(mailOptions);
     // Save OTP to database or session if needed
-    res.status(200).json({ message: 'OTP sent successfully', otp });
+    return NextResponse.json({ message: 'OTP sent successfully', otp }, {status: 200});
   } catch (error) {
     console.error('Error sending OTP:', error);
-    res.status(500).json({ message: 'Failed to send OTP' });
+    return NextResponse.json({ message: 'Failed to send OTP' }, {status: 500});
   }
 }
