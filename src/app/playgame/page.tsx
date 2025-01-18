@@ -51,12 +51,12 @@ export default function PlayGame() {
   }
 
   return (
-    <div className="space-y-6 w-[100%] h-[100%] p-16">
+    <div className="space-y-6 w-[100%] h-[100%] pt-44 p-6">
       <ProgressBar currentStep={5} totalSteps={6} />
-      <h1 className="text-3xl font-bold text-center text-gray-800">Whack-a-Mole</h1>
+      <h1 className="text-3xl font-bold text-center text-white">Whack-a-Mole</h1>
       <div className="text-center space-y-2">
-        <p className="text-xl font-semibold">Score: {score}</p>
-        <p className="text-lg">Time Left: {timeLeft / 1000}s</p>
+        <p className="text-xl font-semibold text-white">Score: {score}</p>
+        <p className="text-lg text-green-600">Time Left: {timeLeft / 1000}s</p>
       </div>
       {!gameStarted ? (
         <Button onClick={startGame} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">

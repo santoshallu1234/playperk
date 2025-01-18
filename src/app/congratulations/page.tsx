@@ -10,7 +10,7 @@ export default function Congratulations() {
   const score = searchParams.get('score')
 
   return (
-    <div className="space-y-6 text-center">
+    <div className="space-y-6 text-center pt-44 p-6">
       <ProgressBar currentStep={6} totalSteps={6} />
       <h1 className="text-3xl font-bold text-gray-800">Congratulations!</h1>
       <p className="text-xl text-gray-600">You've successfully completed the game setup process.</p>
