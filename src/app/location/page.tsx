@@ -58,12 +58,13 @@ export default function Location() {
   }, [])
 
   return (
-    <div className="space-y-6">
-      <ProgressBar currentStep={2} totalSteps={5} />
-      <h1 className="text-3xl font-bold text-center text-gray-800">Shop Location</h1>
+    <div className="space-y-6 px-[3rem ] py-[8rem] w-[100%]">
+     
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="space-y-2">
-          <Label htmlFor="location" className="text-lg">Your shop location</Label>
+      <ProgressBar currentStep={2} totalSteps={5}  />
+      <h1 className="text-3xl font-bold text-center text-white">Shop Location</h1>
+        <div className="space-y-2 w-[100%]">
+          <Label htmlFor="location" className="text-lg text-white">Your shop location</Label>
           <Input 
             id="location" 
             name="location" 

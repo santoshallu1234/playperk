@@ -44,7 +44,6 @@ body {
 }
 
 body{
-  background-color: #0e0c15;
   background-color: #000125;
   overscroll-behavior: contain; /* Prevent unwanted scroll chaining */
 
@@ -181,7 +180,8 @@ transform:translateY(0px);
 }
 
 .slider {
-  background: linear-gradient(to bottom right, #6b21a8,#1e3a8a);
+  height: 20vh;
+  background: transparent;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -221,11 +221,11 @@ transform:translateY(0px);
 }
 
 .slide {
-  height: 15vh;
+  height: 40%;
   display:flex;
   flex-direction:column;
-  justify-content: center;
-  align-items: center;
+  justify-content: end;
+  align-items: end;
   width: 250px;
 }
 
@@ -249,7 +249,6 @@ transform:translateY(0px);
   position: relative;
   right: 0;
   width: 100%;
-  min-height: 50vh;
   display: flex;
   justify-content: center ;
   align-items: start;
@@ -257,11 +256,13 @@ transform:translateY(0px);
   background:#00042a ;
   transition: 0.5s;
   z-index: 2;
+  padding-bottom:1.8rem;
+
 }
 
 .IMGBACK {
-  z-index: 999;
-  margin-top:10rem;
+z-index: 999;
+  margin-top:7rem;
 
 }
 
@@ -297,15 +298,15 @@ transform:translateY(0px);
   z-index: 10;
   justify-content: start;
   align-items: start;
-  height: 100vh;
   width: 100%;
-  margin-top:5rem;
+
+  margin-top:1rem;
   padding-left: 2rem;
 }
 
 .text h2
 {
-  font-size: 13rem;
+  font-size: 10rem;
   font-weight: 800;
   color: #fff;
   margin-top: 130px;
@@ -314,16 +315,16 @@ transform:translateY(0px);
 }
 
 .textForCESA h2{
-  font-size: 10rem;
+  font-size:8rem;
   font-weight: 800;
+  width:100%;
   color: #fff;
-  margin-top: 130px;
   text-transform: uppercase;
 
 }
 .text h3
 {
-  font-size: 3.7em;
+  font-size: 3.5rem;
   font-weight: 700;
   color: #fff;
   line-height: 4rem;
@@ -331,7 +332,7 @@ transform:translateY(0px);
 }
 .text p
 {
-  font-size: 1.1em;
+  font-size: 1.5em;
   color: #fff;
   margin: 25px 0;
   font-weight: 400;
@@ -355,6 +356,149 @@ transform:translateY(0px);
 {
   letter-spacing: 6px;
 }
+
+
+@media screen and (max-width: 1250px) {
+
+  .textForCESA1 h2{ 
+    font-size: 5rem;
+  }
+  .textForCESA2 h2{
+    font-size: 3rem;
+  }
+
+  .textForCESA2{
+    gap:2rem;
+    padding-bottom: 2rem;
+  }
+  .text h2 {
+    font-size: 10rem;
+  }
+
+  .textForCESA h2 {
+    font-size: 8rem;
+  }
+
+  .text h3 {
+    font-size: 3em;
+  }
+
+  .text p {
+    font-size: 1em;
+  }
+}
+
+
+
+@media screen and (max-width: 990px) {
+
+  .textForCESA1 h2{ 
+    font-size: 3rem;
+  }
+  .textForCESA2 h2{
+    font-size: 1rem;
+  }
+
+  .textForCESA2{
+    gap:2rem;
+    padding-bottom: 2rem;
+  }
+  .text {
+    align-items: center;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .text h2 {
+    font-size: 5rem;
+    margin-top: 80px;
+  }
+
+  .textForCESA h2 {
+    font-size: 8rem;
+  }
+
+  .text h3 {
+    font-size: 2rem;
+  }
+
+  .text p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .text a {
+    font-size: 0.9em;
+    padding: 8px 20px;
+  }
+
+
+}
+
+
+@media screen and (max-width: 640px) {
+  .textForCESA1 h2{ 
+    font-size: 2rem;
+  }
+  .textForCESA2 h2{
+    font-size: 1rem;
+  }
+
+  .textForCESA2{
+    gap:2rem;
+    padding-bottom: 2rem;
+  }
+  .HomePage{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+  .text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    text-align: center;
+    gap: 0.25rem;
+  }
+
+  .text h2 {
+    font-size:3rem;
+    margin-top: 60px;
+  }
+.TextContainer{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.textForCESA h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.text h3 {
+  width: 100%;
+
+  font-size: 1em;
+  line-height: 2rem;
+}
+
+.text p {
+  font-size: 0.8em;
+}
+
+.text a {
+  font-size: 0.8em;
+  padding: 6px 15px;
+}
+}
+
 
 .HamBurgerIcon{
   z-index: 50;

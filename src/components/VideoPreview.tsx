@@ -50,7 +50,7 @@ export function VideoPreview({ src }: VideoPreviewProps) {
   }
 
   return (
-    <div className="w-full aspect-video rounded-lg overflow-hidden relative">
+    <div className="w-fullh-[100%] aspect-video rounded-lg overflow-hidden relative">
       <video 
         ref={videoRef}
         src={src} 

@@ -85,7 +85,7 @@ export default function Landing() {
             </div>
           </div>
 <div className="w-full flex justify-start items-start h-[40%] p-5 flex-col">
-  <div className="w-[30%] ">
+  <div className="w-[100%] ">
           <h3
             className="text-[0.6rem] md:text-[1.1rem] lg:text-[3rem] xl:text-[3.7rem]"
           >
@@ -104,8 +104,8 @@ export default function Landing() {
           </div>
           </div>
         </div>
-        <div className="IMGBACK">
-        <Image src={imgBack} height="1000" width="1600" alt="" />
+        <div className="IMGBACK w-[100%] h-[100%] ">
+        <Image src={imgBack}  alt="" />
         </div>
       </div>
 
