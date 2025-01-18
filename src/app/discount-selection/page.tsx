@@ -25,17 +25,18 @@ export default function DiscountSelection() {
   }
 
   return (
-    <div className="space-y-6">
-      <ProgressBar currentStep={3} totalSteps={5} />
-      <h1 className="text-3xl font-bold text-center text-gray-800">Choose a Discount</h1>
+    <div className="space-y-6 w-[100%] py-[8rem] px-[3rem] text-white">
+  
       <form onSubmit={handleSubmit} className="space-y-4">
+      <ProgressBar currentStep={3} totalSteps={5} />
+      <h1 className="text-3xl font-bold text-center text-white">Choose a Discount</h1>
         <RadioGroup value={selectedDiscount} onValueChange={setSelectedDiscount} className="space-y-4">
           {discounts.map((discount) => (
             <div key={discount.id} className="flex items-center space-x-3 p-4 border-2 border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
               <RadioGroupItem value={discount.id} id={discount.id} />
               <div>
                 <Label htmlFor={discount.id} className="text-lg font-semibold">{discount.name}</Label>
-                <p className="text-gray-600">{discount.description}</p>
+                <p className="text-white">{discount.description}</p>
               </div>
             </div>
           ))}
